@@ -7,6 +7,12 @@ This StarterKit comes with
  * [AngularJS](https://angularjs.org/)
  * [Bootstrap](http://getbootstrap.com/css/#overview) (SCSS)
  * [ui-router](https://github.com/angular-ui/ui-router)
- 
+
 
 A test-suite is now set-up
+
+
+If you're using Linux and the watch task is not working do:
+
+**CentOS:** ```su -c "echo fs.inotify.max_user_watches=524288 |  tee -a /etc/sysctl.conf && sysctl -p"```
+**Ubuntu:** ```echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p```

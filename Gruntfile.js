@@ -66,16 +66,18 @@ module.exports = function (grunt) {
 		sass: {
 			options: {
 				//includePaths: ['bower_components/foundation/scss'],
-				sourceMap: true
+				// sourceMap: true
 			},
 			dist: {
 				options: {
 					outputStyle: 'nested'
 					// outputStyle: 'compressed'
 				},
-				files: {
-					'<%= myApp.app %>/assets/styles/main.css': '<%= myApp.app %>/assets/styles/scss/app.scss'
-				}
+				files: [{
+						src: '<%= myApp.app %>/assets/styles/scss/app.scss',
+						dest: '<%= myApp.app %>/assets/styles/main.css'
+					}
+				]
 			}
 		},
 
