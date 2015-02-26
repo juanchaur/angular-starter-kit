@@ -359,7 +359,7 @@ module.exports = function (grunt) {
 			'wiredep',
 			'concurrent:server',
 			'connect:livereload',
-			'open:dev',
+			//'open:dev',
 			'watch'
 		]);
 
