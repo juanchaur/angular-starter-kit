@@ -1,5 +1,8 @@
 'use strict';
 
+
+
+
 /**
  * @ngdoc overview
  * @name myApp
@@ -12,9 +15,11 @@ var myApp = angular.module('myApp', [
 	'ngAnimate',
 	'ngSanitize',
 	'ui.router',
-	'ui.bootstrap'
+	'ui.bootstrap',
+	'bwServices'
 ]);
 
+angular.module('bwServices', ['bwServicesMock']);
 
 myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 	$locationProvider.html5Mode(true);

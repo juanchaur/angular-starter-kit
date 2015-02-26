@@ -10,7 +10,7 @@
 
 var app = angular.module('myApp');
 
-app.controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', ['$scope', 'booksService', function ($scope, booksService) {
 
 	$scope.awesomeThings = [
 		{
@@ -31,4 +31,18 @@ app.controller('MainCtrl', function ($scope) {
 		}
 	];
 
-});
+	$scope.loadingBooks = true;
+
+
+	$scope.callToService = function () {
+		console.log('calling to service');
+
+		$scope.loadingBooks = true;
+
+		booksService.getAll().then(function (response) {
+			$scope.books = response.data;
+			$scope.loadingBooks = false;
+		});
+	};
+
+}]);

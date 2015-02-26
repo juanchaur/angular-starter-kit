@@ -167,7 +167,8 @@ module.exports = function (grunt) {
 		wiredep: {
 			app: {
 				src: ['<%= myApp.app %>/index.html'],
-				ignorePath:  /\.\.\//
+				ignorePath:  /\.\.\//,
+				devDependencies: true //delete this when not $httpBackend
 			}
 		},
 
@@ -333,6 +334,13 @@ module.exports = function (grunt) {
 				configFile: 'test/karma.conf.js',
 				singleRun: true
 			}
+		},
+
+		open: {
+			dev: {
+				url: 'http://localhost:<%= connect.options.port %>',
+				app: 'google-chrome'
+			}
 		}
   	});
 
@@ -351,6 +359,7 @@ module.exports = function (grunt) {
 			'wiredep',
 			'concurrent:server',
 			'connect:livereload',
+			'open:dev',
 			'watch'
 		]);
 
