@@ -1,8 +1,5 @@
 'use strict';
 
-
-
-
 /**
  * @ngdoc overview
  * @name myApp
@@ -16,6 +13,7 @@ var myApp = angular.module('myApp', [
 	'ngSanitize',
 	'ui.router',
 	'ui.bootstrap',
+	'angular-momentjs',
 	'bwServices'
 ]);
 
