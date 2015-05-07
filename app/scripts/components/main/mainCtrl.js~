@@ -74,8 +74,8 @@ app.controller('MainCtrl', ['$scope', 'booksService', 'laterService', '$modal', 
 		    console.log(new Date());
 		    count--;
 		    if(count <= 0) {
-		    	count = 10;
 			//t.clear(); //to stop de count
+		    	count = 10;
 		    }
 		  }
 
@@ -84,6 +84,8 @@ app.controller('MainCtrl', ['$scope', 'booksService', 'laterService', '$modal', 
 
 	startLater();
 }]);
+
+
 /*
   // this schedule will fire on the closest weekday to the 15th
   // every month at 2:00 am except in March
