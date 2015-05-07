@@ -7,7 +7,6 @@
  * # MainCtrl
  * Controller of the myTestApp
  */
-
 var app = angular.module('myApp');
 
 app.controller('MainCtrl', ['$scope', 'booksService', 'laterService', '$modal', function ($scope, booksService, laterService, $modal) {
@@ -33,7 +32,6 @@ app.controller('MainCtrl', ['$scope', 'booksService', 'laterService', '$modal', 
 	];
 
 	$scope.loadingBooks = true;
-
 
 	$scope.callToService = function () {
 		console.log('calling to service');
@@ -62,7 +60,6 @@ app.controller('MainCtrl', ['$scope', 'booksService', 'laterService', '$modal', 
 			sat: 7
 		}
 		var sched = laterService.parse.recur()
-
 			.after('15:00').time()
 			.before('15:16').time()
 			.on(weekDays.wed).dayOfWeek()
@@ -77,8 +74,7 @@ app.controller('MainCtrl', ['$scope', 'booksService', 'laterService', '$modal', 
 		    console.log(new Date());
 		    count--;
 		    if(count <= 0) {
-
-				//t.clear(); //to stop de count
+			//t.clear(); //to stop de count
 		    	count = 10;
 		    }
 		  }
@@ -101,11 +97,6 @@ app.controller('MainCtrl', ['$scope', 'booksService', 'laterService', '$modal', 
                   .on(16).dayOfMonth().on(2).dayOfWeek().on(2).hour()
                 .except()
                   .on(3).month();
-
-
-
-
-
 var sched = laterService.parse.recur()
 			//.on(weekDays.wed).dayOfWeek()
 		//	.every(1).min()
